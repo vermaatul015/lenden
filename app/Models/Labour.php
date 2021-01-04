@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Kyslik\ColumnSortable\Sortable;
 
-class Client extends Model
+class Labour extends Model
 {
     use Sortable;
     /**
@@ -13,7 +13,7 @@ class Client extends Model
      *
      * @var string
      */
-    protected $table = 'clients';
+    protected $table = 'labours';
 
     /**
     * The database primary key value.
@@ -30,5 +30,8 @@ class Client extends Model
     protected $fillable = ['name', 'is_active','user_id'];
     protected $sortable  = ['name', 'is_active'];
 
-    
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

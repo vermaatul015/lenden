@@ -10,6 +10,9 @@
       <li class="nav-item ">
         <a href="{{ Session::has('user') ?  route('clients.index') : '' }}" class="nav-link {{$data['page'] == 'Client'?'active' : ''}}"> Client</a>
       </li> 
+      <li class="nav-item ">
+        <a href="{{ Session::has('user') ?  route('labours.index') : '' }}" class="nav-link {{$data['page'] == 'Labour'?'active' : ''}}"> Labour</a>
+      </li> 
       @endif
     </ul>
 

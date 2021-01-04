@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests;
-use App\Models\Client;
 use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Models\Labour;
 use Illuminate\Support\Facades\Storage;
 use Session;
 
-class ClientController extends Controller
+class LabourController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,16 +21,17 @@ class ClientController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $clients = Client::where('name', 'LIKE', "%$keyword%")
+            $labours = Labour::where('name', 'LIKE', "%$keyword%")
                 ->orWhere('is_active', 'LIKE', "%$keyword%")
                 ->sortable()->paginate($perPage);
         } else {
-            $clients = Client::sortable()->paginate($perPage);
+            $labours = Labour::sortable()->paginate($perPage);
         }
-        $data['page'] = 'Client';
-        $data['clients'] = $clients;
-        $data['add_new'] = route('clients.create');
-        return view('clients.index')->with('data',$data);
+        $data['page'] = 'Labour';
+        $data['labours'] = $labours;
+        
+        $data['add_new'] = route('labours.create');
+        return view('labours.index')->with('data',$data);
     }
 
     /**
@@ -41,10 +41,10 @@ class ClientController extends Controller
      */
     public function create()
     {
-        $data['page'] = 'Client';
-        $data['action'] = trans('setup.create_module',['module'=>'Client']);
-        $data['model_url'] = route('clients.index');
-        return view('clients.create')->with('data',$data);
+        $data['page'] = 'Labour';
+        $data['action'] = trans('setup.create_module',['module'=>'Labour']);
+        $data['model_url'] = route('labours.index');
+        return view('labours.create')->with('data',$data);
     }
 
     /**
@@ -68,9 +68,9 @@ class ClientController extends Controller
         $createData['is_active'] = $requestData['is_active'];
         $createData['user_id'] = \Auth::user()->id;
 
-        Client::create($createData);
+        Labour::create($createData);
 
-        return \Redirect::route('clients.index')->with('flash-success', trans('setup.module_added',['module'=>'Client']));
+        return \Redirect::route('labours.index')->with('flash-success', trans('setup.module_added',['module'=>'Labour']));
     }
 
     /**
@@ -82,12 +82,12 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        $client = Client::findOrFail($id);
-        $data['page'] = 'Client';
-        $data['client'] = $client;
-        $data['action'] = trans('setup.show_module',['module'=>'Client']);
-        $data['model_url'] = route('clients.index');
-        return view('clients.show')->with('data',$data);
+        $labours = Labour::findOrFail($id);
+        $data['page'] = 'Labour';
+        $data['labours'] = $labours;
+        $data['action'] = trans('setup.show_module',['module'=>'Labour']);
+        $data['model_url'] = route('labours.index');
+        return view('labours.show')->with('data',$data);
     }
 
     /**
@@ -99,12 +99,12 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        $client = Client::findOrFail($id);
-        $data['page'] = 'Client';
-        $data['client'] = $client;
-        $data['action'] = trans('setup.update_module',['module'=>'Client']);
-        $data['model_url'] = route('clients.index');
-        return view('clients.edit')->with('data',$data);
+        $labours = Labour::findOrFail($id);
+        $data['page'] = 'Labour';
+        $data['labours'] = $labours;
+        $data['action'] = trans('setup.update_module',['module'=>'Labour']);
+        $data['model_url'] = route('labours.index');
+        return view('labours.edit')->with('data',$data);
     }
 
     /**
@@ -122,16 +122,16 @@ class ClientController extends Controller
 			'is_active' => 'required'
 		]);
         $requestData = $request->all();
-        $client = Client::findOrFail($id);
+        $labours = Labour::findOrFail($id);
         
         
         $createData = [];
         $createData['name'] = $requestData['name'];
-$createData['is_active'] = $requestData['is_active'];
+        $createData['is_active'] = $requestData['is_active'];
 
-        $client->update($createData);
+        $labours->update($createData);
 
-        return \Redirect::route('clients.index')->with('flash-success', trans('setup.module_updated',['module'=>'Client']));
+        return \Redirect::route('labours.index')->with('flash-success', trans('setup.module_updated',['module'=>'Labour']));
     }
 
     /**
@@ -143,8 +143,8 @@ $createData['is_active'] = $requestData['is_active'];
      */
     public function destroy($id)
     {
-        Client::destroy($id);
+        Labour::destroy($id);
 
-        return \Redirect::route('clients.index')->with('flash-success',  trans('setup.module_deleted',['module'=>'Client']));
+        return \Redirect::route('labours.index')->with('flash-success',  trans('setup.module_deleted',['module'=>'Labour']));
     }
 }

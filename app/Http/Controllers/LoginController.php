@@ -59,6 +59,7 @@ class LoginController extends Controller
 					}
 					if(\Auth::user()->name){
 						Session::put('user',\Auth::user()->name);
+						Session::put('user_id',\Auth::user()->id);
 					}
 					return \Redirect::route('dashboard');
 				}else{
@@ -114,6 +115,7 @@ class LoginController extends Controller
 						if(\Auth::user()->is_active == 'Y')   {
 							if(\Auth::user()->name){
 								Session::put('user',\Auth::user()->name);
+								Session::put('user_id',\Auth::user()->id);
 							}
 							return \Redirect::route('dashboard');
 						}else{
