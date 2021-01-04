@@ -1,0 +1,178 @@
+.navbar-white-text .navbar-nav .nav-link {
+    color: #fff;
+}
+.navbar-white-text .navbar-nav .nav-link:hover, .navbar-white-text .navbar-nav .nav-link:focus {
+    color: #d2d6de !important;
+  }
+.card-new-color{
+    border-top: 3px solid #3c8dbc !important;
+}
+
+.card-new-text-color:not(.card-outline)>.card-header {
+    background-color: #d2d6de !important;
+    color: black !important;
+}
+
+.card-new-text-color1:not(.card-outline)>.card-header {
+    background-color: #d2d6de !important;
+    color: black !important;
+}
+
+.card-new-text-color:not(.card-outline)>.card-header:hover, .card-new-text-color:not(.card-outline)>.card-header:focus {
+    background-color: #3c8dbc !important;
+    cursor: pointer;
+}
+
+.nav-item .active{
+    color: #d2d6de !important;
+}
+
+.aling-right {
+    float: right;
+    padding-right: 10px;
+}
+
+.padding-left-10{
+    padding-left: 10px;
+}
+
+.margin-right-disable{
+    margin-right: 0px;
+}
+
+.padding-top-less{
+    padding-top: inherit;
+}
+
+.font-size-15{
+    font-size: 15px;
+}
+
+.scroll-demo {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100px;
+    max-height: 300px;
+}
+
+.excel-class{
+    float: right;
+    font-size: 18px;
+    cursor: pointer;
+    margin: -3px 0 0 0;
+  }
+
+.card-new-text-color .card-title{ font-size:15px}
+.card-new-text-color .card-body label{ font-size:14px}
+.form-group .form-control{ font-size: 14px;}
+  @media (max-width:767px){
+    .dataTables_info {
+      text-align: center;
+    }
+    .card-new-text-color .pagination {
+      margin: 11px auto;
+      float: none;
+      align-items: center;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+    }
+    .card-new-text-color .pagination li{ display:inline-block;}
+    .aling-right {
+      float: none;
+      padding-right: 0px;
+  }
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 15px !important;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  td{
+    font-size: 13px;
+  }
+  th{
+    font-size: 14px;
+    font-weight:600;
+  }
+  .card-new-text-color .pagination{
+    margin-top: 5px;
+  }
+  .card-new-text-color .card-header>.card-tools {
+    float: left;
+    margin-right: 0;
+}
+.dataTables_info {
+  font-size: 13px;
+}
+.page-link { line-height: 14px;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6; font-size: 13px;
+}
+.eqh {    
+    height: 100%;
+}
+.gap_wrap{ margin-bottom: 20px;;}
+.login_btn{ margin-bottom: 15px;}
+.modal-content .close {
+  float: none;
+  font-size: 1.7;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: none;
+  opacity: .5;
+  position: absolute;
+  right: 22px;
+  top: 10px;
+}
+.form-group.mb-5 {
+  margin-bottom: 5px !important;
+}
+
+.white-color{
+  color: #fff;
+}
+.search-padding{
+  padding: 12px;
+}
+.fulw{ width:100%}
+.text-dark{display: inline-block;padding-right: 15px;}
+
+.tooltip_cursor:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.help-block{
+  color: red;
+}
+
+.lang-section {
+  position: absolute;
+  max-width: 300px;
+  top: 10px;
+  right: 10px;
+}
+.error{
+  color: red;
+}
+.pull-right-logout{
+  float: right;
+  padding-top: 15px;
+}
+.dropdown-logout{
+  padding: 10px;background-color: #f4f6f9;
+}
+button:focus{
+  border:none;
+  outline:none;
+}

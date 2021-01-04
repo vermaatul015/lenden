@@ -1,0 +1,125 @@
+{
+    "fields": [
+        {
+            "name": "name",
+            "type": "string",
+            "label": "",
+            "showInList": "yes",
+            "showInView": "yes"
+        },
+        {
+            "name": "description",
+            "type": "text",
+            "label": "Description",
+            "showInList": "yes",
+            "showInView": "yes"
+        },
+        {
+            "name": "password",
+            "type": "password",
+            "label": "Password",
+            "showInList": "no",
+            "showInView": "no"
+        },
+        {
+            "name": "email",
+            "type": "email",
+            "label": "Email",
+            "showInList": "no",
+            "showInView": "yes"
+        },
+        {
+            "name": "phone_no",
+            "type": "number",
+            "label": "Phone No",
+            "showInList": "yes",
+            "showInView": "yes"
+        },
+        {
+            "name": "date",
+            "type": "date",
+            "label": "Date",
+            "showInList": "no",
+            "showInView": "yes"
+        },
+        {
+            "name": "gender",
+            "type": "radio",
+            "options": {
+                "male": "Male",
+                "female": "Female"
+            },
+            "label": "Gender",
+            "showInList": "yes",
+            "showInView": "yes"
+        },
+        {
+            "name": "skills",
+            "type": "checkbox",
+            "options": {
+                "php": "Php",
+                "html": "Html"
+            },
+            "label": "Skills",
+            "showInList": "yes",
+            "showInView": "yes"
+        },
+        {
+            "name": "category",
+            "type": "select",
+            "options": {
+                "technology": "Technology",
+                "tips": "Tips",
+                "health": "Health"
+            },
+            "label": "Category",
+            "showInList": "yes",
+            "showInView": "yes"
+        },
+        {
+            "name": "image",
+            "type": "file",
+            "label": "Image",
+            "showInList": "no",
+            "showInView": "yes"
+        }
+    ],
+    "validations": [
+        {
+            "field": "name",
+            "rules": "required|max:23"
+        },
+        {
+            "field": "description",
+            "rules": "required|max:230"
+        },
+        {
+            "field": "password",
+            "rules": "required|max:23"
+        },
+        {
+            "field": "email",
+            "rules": "required|max:23"
+        },
+        {
+            "field": "phone_no",
+            "rules": "required|max:10"
+        },
+        {
+            "field": "date",
+            "rules": "required"
+        },
+        {
+            "field": "gender",
+            "rules": "required"
+        },
+        {
+            "field": "skills",
+            "rules": "required"
+        },
+        {
+            "field": "category",
+            "rules": "required"
+        }
+    ]
+}

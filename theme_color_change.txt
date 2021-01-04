@@ -1,0 +1,37 @@
+To change navbar color, replace .navbar-dark .navbar-lightblue classes with the following classes in <nav> tag present in views/admin/layouts/afterlogintemplete.blade.php:-
+
+1. .navbar-dark .navbar-primary -  #007BFF (Dodger Blue)
+2. .navbar-dark .navbar-secondary -  #6c757d (Pompeii ash)
+3. .navbar-dark .navbar-info -  #17a2b8 (dark blue)
+4. .navbar-dark .navbar-success -  #28a745 (Dark lime green)
+5. .navbar-dark .navbar-danger -  #dc3545 (Amaranth)
+6. .navbar-dark .navbar-indigo -  #6610f2 (Indigo)
+8. .navbar-dark .navbar-purple -  #6f42c1 (Purple)
+9. .navbar-dark .navbar-pink -  #e83e8c (Pink)
+10. .navbar-dark .navbar-navy -  #001f3f (Navy)
+11. .navbar-dark .navbar-lightblue -  #3c8dbc (Light Blue)
+12. .navbar-dark .navbar-teal -  #20c997 (Strong cyan - lime green)
+13. .navbar-dark .navbar-cyan -  #17a2b8 (Cyan)
+14. .navbar-dark .navbar-gray-dark -  #343a40 (Baltic Sea)
+15. .navbar-dark .navbar-gray -  #6c757d (Pompeii ash)
+16. .navbar-light .navbar-warning -  #ffc107 (Amber)
+17. .navbar-light .navbar-white -  #fff (White)
+18. .navbar-light .navbar-orange -  #fd7e14 (Orange)
+
+
+Reference Link = https://adminlte.io/docs/3.0/layout.html
+
+To change card corder color, replace all occurence of .card .card-outline .card-new-color classes with the following classes in <div> tag present in 
+views/admin/< module >/create.blade.php,
+views/admin/< module >/edit.blade.php
+views/admin/< module >/index.blade.php
+views/admin/< module >/show.blade.php
+
+1. .card .card-outline .card-primary - #007bff (Dodger Blue)
+2. .card .card-outline .card-secondary - #6c757d (Pompeii ash)
+3. .card .card-outline .card-info - #17a2b8 (Dark blue)
+4. .card .card-outline .card-danger - #dc3545 (Amaranth)
+5. .card .card-outline .card-warning - #ffc107 (Amber)
+6. .card .card-outline .card-success - #28a745 (Dark lime green)
+
+Reference Link = https://adminlte.io/themes/v3/pages/UI/modals.html

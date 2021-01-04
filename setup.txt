@@ -1,0 +1,18 @@
+Steps to follow for full laravel zip:
+
+1. Add database name and db connection in env file.
+2. If image or file is there, 
+	- Update 'APP_PATH' in env, if this project will be present inside public_html/sub_folder then APP_PATH=/sub_folder/public.
+    	- execute  (php artisan storage:link) in terminal or run /storage-link in browser to create storage link for accessing saved files, 
+		url: http://example.com/public/storage-link
+3. Execute (php artisan migrate) in terminal to create all tables in the database
+4. After adding all this, project will run in /public/route-group (if any)
+	eg: considering project is uploaded in public_html, then project will run using "http://example.com/public/<route-group>" url
+5. Now finally, to login to the project we need to add data to admin_users table, which can be done by one of the following way:-
+	- Exceute (php artisan db:seed) which will add one user data to the table and now login can be done using credentials
+      		email => admin@yopmail.com, password => 12345678 
+    	- Or, register a new user using the following url: http://example.com/public/register
+6. All the data are send from controller to views via "$data" array. Please update as per requirement.
+7. To update localised translations, "barryvdh/laravel-translation-manager" package is needed. 
+		For installation, pls refer to https://github.com/barryvdh/laravel-translation-manager
+		To access it, open https://<domain>/public/transaltions in browser

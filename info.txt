@@ -1,0 +1,7 @@
+Admin Module creation from command example:-
+
+php artisan crud:generate Tests --fields_from_file="fields.json" --view-path=admin --controller-namespace=Admin --route-group=admin --form-helper=html --model-namespace=Models
+
+Visit for more:- 
+
+https://github.com/appzcoder/crud-generator
