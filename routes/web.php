@@ -25,6 +25,7 @@ Route::group(['prefix' =>''],function(){
         Route::any('/dashboard',['as' => 'dashboard','uses' => 'DashboardController@index']);
         Route::resource('/clients', 'ClientController');
         Route::resource('/labours', 'LabourController');
+        Route::resource('/items', 'ItemController');
     });
 });
 

@@ -13,6 +13,9 @@
       <li class="nav-item ">
         <a href="{{ Session::has('user') ?  route('labours.index') : '' }}" class="nav-link {{$data['page'] == 'Labour'?'active' : ''}}"> Labour</a>
       </li> 
+      <li class="nav-item ">
+        <a href="{{ Session::has('user') ?  route('items.index') : '' }}" class="nav-link {{$data['page'] == 'Item'?'active' : ''}}"> Item Added by Client</a>
+      </li> 
       @endif
     </ul>
 
